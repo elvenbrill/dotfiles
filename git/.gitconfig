@@ -3,6 +3,9 @@
 	email = elvenbrill@pm.me
 	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJcbrKKD2rAzCjlTUu4mePtRMTNf5i1M5qi1OUN+s/gS elvenbrill@pm.me
 
+[commit]
+  gpgsign = true
+
 [gpg]
 	format = ssh
 
@@ -13,9 +16,11 @@
   ui = auto
 
 [core]
+  autocrlf = input
   attributesFile = "$HOME/.gitattributes"
   excludesfile = "$HOME/.gitignore"
   editor = code --wait
+  untrackedCache = true
   whitespace = space-before-tab,indent-with-non-tab,trailing-space
 
 [init]
@@ -36,3 +41,6 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+
+[help]
+	autocorrect = 1
