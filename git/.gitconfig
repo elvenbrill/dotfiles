@@ -1,0 +1,38 @@
+[user]
+	name = elvenbrill
+	email = elvenbrill@pm.me
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJcbrKKD2rAzCjlTUu4mePtRMTNf5i1M5qi1OUN+s/gS elvenbrill@pm.me
+
+[gpg]
+	format = ssh
+
+[github]
+  user = elvenbrill
+
+[color]
+  ui = auto
+
+[core]
+  attributesFile = "$HOME/.gitattributes"
+  excludesfile = "$HOME/.gitignore"
+  editor = code --wait
+  whitespace = space-before-tab,indent-with-non-tab,trailing-space
+
+[init]
+	defaultBranch = main
+
+[fetch]
+	prune = true
+
+[pull]
+  rebase = true
+
+[push]
+  default = simple
+  followTags = true
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
