@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Ref: https://github.com/alrra/dotfiles/commit/84d8beb2bc49e15b370ee4be230f61b7cf1d6aa2
+
+$@
